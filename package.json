@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "workspaces": [
+    "site",
+    "gatsby-robotois-arduino",
+    "gatsby-robotois-store"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "gatsby-robotois-store",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "gatsby": "^2.13.25",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "@mdx-js/react": "^1.0.27",
+    "gatsby-plugin-theme-ui": "^0.2.6",
+    "gatsby-source-filesystem": "^2.1.5",
+    "gatsby-transformer-yaml": "^2.2.3",
+    "theme-ui": "^0.2.14"
+  }
+}

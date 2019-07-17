@@ -1,0 +1,15 @@
+- name: React Rally
+  description: Salt Lake City, UT
+  release_date: 2019-08-22
+
+- name: DinosaurJS
+  description: Denver, CO
+  release_date: 2019-06-20
+
+- name: JSHeroes
+  description: Cluj-Napoca, Romania
+  release_date: 2020-04-23
+
+- name: The Lead Developer
+  description: Austin, TX
+  release_date: 2019-11-08
