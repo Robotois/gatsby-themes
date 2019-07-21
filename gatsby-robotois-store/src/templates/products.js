@@ -10,7 +10,7 @@ function ProductsTemplate() {
         nodes {
           id
           name
-          releaseDate
+          releaseDate(formatString: "MMMM D, YYYY")
           description
           slug
         }

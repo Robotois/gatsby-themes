@@ -17,6 +17,7 @@ exports.sourceNodes = ({ actions }) => {
       name: String!
       description: String!
       releaseDate: Date! @dateformat @proxy(from: "release_date")
+      videoId: String!
       slug: String!
     }
   `);

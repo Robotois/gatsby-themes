@@ -9,6 +9,7 @@ export const query = graphql`
       name
       releaseDate(formatString: "MMMM D, YYYY")
       description
+      videoId
       slug
     }
   }

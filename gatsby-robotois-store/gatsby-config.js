@@ -1,6 +1,6 @@
 module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
   siteMetadata: {
-    title: 'Robotois themes',
+    title: 'ROBOTOIS',
     headline: 'Kit disponibles',
     basePath,
   },
