@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+// eslint-disable-next-line
 import React from 'react';
 import Section from './section';
 import { Styled } from 'theme-ui';

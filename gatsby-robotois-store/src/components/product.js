@@ -1,15 +1,19 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Styled } from 'theme-ui';
-import Button from './button';
+import Checkout from './checkout';
 import Slide from './slide';
 import Section from './section';
 
-const BuyButton = ({ type }) => {
-  return <Button type={type} onClick={() => alert(1232)} />;
-};
-
-function Product({ name, releaseDate, description, videoId, components }) {
+function Product({
+  name,
+  releaseDate,
+  description,
+  videoId,
+  components,
+  sku,
+  price,
+}) {
   return (
     <div
       sx={{
@@ -56,7 +60,7 @@ function Product({ name, releaseDate, description, videoId, components }) {
             }}
           >
             <Styled.h1 sx={{ margin: 3 }}>{name}</Styled.h1>
-            <BuyButton type="primary" />
+            <Checkout type="primary" sku={sku} />
           </div>
         </div>
       </div>
@@ -75,9 +79,9 @@ function Product({ name, releaseDate, description, videoId, components }) {
       <Section type="primary">
         <div>
           <h2 sx={{ textAlign: 'center', color: 'white', fontSize: 5 }}>
-            $1,503.00 MXN
+            {price}
           </h2>
-          <BuyButton type="light" />
+          <Checkout type="light" sku={sku} />
         </div>
       </Section>
     </div>

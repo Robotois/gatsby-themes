@@ -10,6 +10,8 @@ export const query = graphql`
       releaseDate(formatString: "MMMM D, YYYY")
       description
       videoId
+      sku
+      price
       components {
         name
         description
