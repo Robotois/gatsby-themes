@@ -16,6 +16,9 @@ const types = {
   gray: {
     backgroundColor: 'gray.0',
   },
+  primary: {
+    backgroundColor: 'primary',
+  },
 };
 
 function Section({ children, type, centerContent }) {

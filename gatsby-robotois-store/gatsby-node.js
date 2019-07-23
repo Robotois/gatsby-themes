@@ -12,6 +12,11 @@ exports.onPreBootstrap = ({ reporter }, options) => {
 // 2. define the product type
 exports.sourceNodes = ({ actions }) => {
   actions.createTypes(`
+    type Component implements Node @dontInfer {
+      name: String
+      description: String
+      image: String
+    }
     type Product implements Node @dontInfer {
       id: ID!
       name: String!
@@ -19,6 +24,7 @@ exports.sourceNodes = ({ actions }) => {
       releaseDate: Date! @dateformat @proxy(from: "release_date")
       videoId: String!
       slug: String!
+      components: [Component]
     }
   `);
 };

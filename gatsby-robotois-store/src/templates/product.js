@@ -10,16 +10,21 @@ export const query = graphql`
       releaseDate(formatString: "MMMM D, YYYY")
       description
       videoId
-      slug
+      components {
+        name
+        description
+        image
+      }
     }
   }
 `;
 
-const ProductTemplate = ({ data: { product } }) => (
-  <Layout>
-    {console.log(product)}
-    <Product {...product} />
-  </Layout>
-);
+function ProductTemplate({ data: { product } }) {
+  return (
+    <Layout>
+      <Product {...product} />
+    </Layout>
+  );
+}
 
 export default ProductTemplate;

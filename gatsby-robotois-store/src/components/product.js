@@ -3,8 +3,13 @@ import { jsx } from 'theme-ui';
 import { Styled } from 'theme-ui';
 import Button from './button';
 import Slide from './slide';
+import Section from './section';
 
-function Product({ name, releaseDate, description, videoId }) {
+const BuyButton = ({ type }) => {
+  return <Button type={type} onClick={() => alert(1232)} />;
+};
+
+function Product({ name, releaseDate, description, videoId, components }) {
   return (
     <div
       sx={{
@@ -20,7 +25,7 @@ function Product({ name, releaseDate, description, videoId }) {
         }}
       >
         <iframe
-          frameborder="0"
+          frameBorder="0"
           height="100%"
           width="100%"
           title="Video"
@@ -36,12 +41,12 @@ function Product({ name, releaseDate, description, videoId }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'rgba(255,255,255,.6)',
+            bg: 'rgba(255,255,255,.6)',
           }}
         >
           <div
             sx={{
-              background: 'rgba(255,255,255,.90)',
+              bg: 'rgba(255,255,255,.90)',
               padding: 48,
               borderRadius: 8,
               display: 'flex',
@@ -51,13 +56,30 @@ function Product({ name, releaseDate, description, videoId }) {
             }}
           >
             <Styled.h1 sx={{ margin: 3 }}>{name}</Styled.h1>
-            <Button type="purple" onClick={() => alert(1232)} />
+            <BuyButton type="primary" />
           </div>
         </div>
       </div>
       <Styled.h2 sx={{ margin: 4, textAlign: 'center' }}>Descripción</Styled.h2>
-      <Slide />
-      <Slide type="gray" invert />
+      {components.map((component, idx) => {
+        const invert = !!(idx % 2);
+        return (
+          <Slide
+            invert={invert}
+            type={invert ? 'gray' : 'light'}
+            {...component}
+            key={component.name}
+          />
+        );
+      })}
+      <Section type="primary">
+        <div>
+          <h2 sx={{ textAlign: 'center', color: 'white', fontSize: 5 }}>
+            $1,503.00 MXN
+          </h2>
+          <BuyButton type="light" />
+        </div>
+      </Section>
     </div>
   );
 }

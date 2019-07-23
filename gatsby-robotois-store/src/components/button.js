@@ -14,11 +14,11 @@ const styles = {
 };
 
 const types = {
-  purple: {
+  primary: {
     backgroundColor: 'primary',
     color: 'white',
   },
-  white: {
+  light: {
     backgroundColor: 'white',
     color: 'primary',
   },
@@ -30,7 +30,7 @@ function Button(props) {
     <button
       sx={{
         ...styles,
-        ...types[type || 'purple'],
+        variant: `buttons.${type}` || 'primary',
       }}
       {...props}
     >

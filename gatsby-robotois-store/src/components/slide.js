@@ -1,6 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import React from 'react';
 import Section from './section';
+import { Styled } from 'theme-ui';
+import ProductImage from './product-image';
 
 const sharedStyles = {
   flex: 1,
@@ -10,18 +13,21 @@ const sharedStyles = {
   justifyContent: 'center',
 };
 
-function TextComponent({ title, description }) {
+function TextComponent({ name, description = 'Some description' }) {
   return (
-    <>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </>
+    <div
+      sx={{
+        width: 'description',
+      }}
+    >
+      <Styled.h3>{name}</Styled.h3>
+      <Styled.p>{description}</Styled.p>
+    </div>
   );
 }
 
 function Slide(props) {
-  const { invert, title, description, image } = props;
-
+  const { invert, name, description, image, ...rest } = props;
   return (
     <Section {...rest}>
       <div
@@ -30,14 +36,22 @@ function Slide(props) {
           ...sharedStyles,
         }}
       >
-        one
+        {invert ? (
+          <TextComponent name={name} description={description} />
+        ) : (
+          <ProductImage image={image} />
+        )}
       </div>
       <div
         sx={{
           ...sharedStyles,
         }}
       >
-        two
+        {invert ? (
+          <ProductImage image={image} />
+        ) : (
+          <TextComponent name={name} description={description} />
+        )}
       </div>
       <div
         sx={{
