@@ -22,8 +22,6 @@ export default function ProductImage({ image }) {
     return element.node.fixed.src.split('/').pop() === image;
   });
   if (!fixed) {
-    console.log(123123);
-
     return null;
   }
   return <Img fixed={fixed.node.fixed} alt="imagen del componente del kit" />;
