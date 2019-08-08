@@ -11,7 +11,6 @@ export const query = graphql`
       description
       videoId
       sku
-      price
       components {
         name
         description

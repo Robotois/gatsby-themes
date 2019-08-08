@@ -17,6 +17,7 @@
     "gatsby-plugin-stripe": "^1.2.1",
     "gatsby-plugin-theme-ui": "^0.2.6",
     "gatsby-source-filesystem": "^2.1.5",
+    "gatsby-source-stripe": "^3.0.2",
     "gatsby-transformer-sharp": "^2.2.4",
     "gatsby-transformer-yaml": "^2.2.3",
     "theme-ui": "^0.2.14"

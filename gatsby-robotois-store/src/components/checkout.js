@@ -16,7 +16,7 @@ const styles = {
 
 const Checkout = class extends React.Component {
   componentDidMount() {
-    this.stripe = window.Stripe('pk_test_wnQy3evSdstHLtQHCTv6wuSS00gVJohaw8', {
+    this.stripe = window.Stripe('pk_test_EDJSsLGb66BF0YDw3ddJGYIT00NjvmaaAl', {
       betas: ['checkout_beta_4'],
     });
   }
@@ -27,6 +27,7 @@ const Checkout = class extends React.Component {
       items: [{ sku, quantity: 1 }],
       successUrl: `http://localhost:8000/page-2/`,
       cancelUrl: `http://localhost:8000/`,
+      billingAddressCollection: 'required',
     });
     if (error) {
       console.warn('Error:', error);

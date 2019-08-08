@@ -50,6 +50,7 @@ export const theme = {
       width: 'default',
       a: {
         color: 'inherit',
+        textDecoration: 'none',
       },
     },
     Main: {
