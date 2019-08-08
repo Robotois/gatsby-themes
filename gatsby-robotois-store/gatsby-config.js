@@ -4,12 +4,17 @@ require('dotenv').config({
 });
 
 module.exports = ({ contentPath = 'data', basePath = '/' }) => {
-  console.log('**************');
-  console.log(process.env.NODE_ENV);
-  console.log('**************');
+  if (!process.env.STRIPE_SECRET_KEY) {
+    throw Error(
+      'You have not set stripe secret key, check https://www.gatsbyjs.org/docs/environment-variables/',
+    );
+  }
 
-  console.log(process.env.STRIPE_SECRET_KEY);
-  console.log('****+++++++++++**********');
+  if (!process.env.STRIPE_PUBLIC_KEY) {
+    throw Error(
+      'You have not set stripe public key, check https://www.gatsbyjs.org/docs/environment-variables/',
+    );
+  }
 
   return {
     siteMetadata: {

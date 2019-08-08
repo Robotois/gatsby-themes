@@ -16,7 +16,7 @@ const styles = {
 
 const Checkout = class extends React.Component {
   componentDidMount() {
-    this.stripe = window.Stripe('pk_test_EDJSsLGb66BF0YDw3ddJGYIT00NjvmaaAl', {
+    this.stripe = window.Stripe(process.env.STRIPE_PUBLIC_KEY, {
       betas: ['checkout_beta_4'],
     });
   }
