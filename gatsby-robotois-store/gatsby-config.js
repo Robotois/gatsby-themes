@@ -40,6 +40,12 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => {
         },
       },
       {
+        resolve: 'gatsby-plugin-page-creator',
+        options: {
+          path: `${__dirname}/src/pages`,
+        },
+      },
+      {
         resolve: 'gatsby-source-stripe',
         options: {
           objects: ['Sku'],

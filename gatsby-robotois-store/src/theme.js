@@ -1,6 +1,6 @@
 export const theme = {
   space: [0, 4, 8, 16, 32, 64],
-  breakpoints: ['40em', '56em', '64em'],
+  breakpoints: ['992px', '1200px', '1920px'],
   fonts: {
     body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
   },

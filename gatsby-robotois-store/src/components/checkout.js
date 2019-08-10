@@ -25,8 +25,8 @@ const Checkout = class extends React.Component {
     const { sku } = this.props;
     const { error } = await this.stripe.redirectToCheckout({
       items: [{ sku, quantity: 1 }],
-      successUrl: `http://localhost:8000/page-2/`,
-      cancelUrl: `http://localhost:8000/`,
+      successUrl: `${process.env.STRIPE_SUCCESS_URL}`,
+      cancelUrl: `${process.env.STRIPE_CANCEL_URL}`,
       billingAddressCollection: 'required',
     });
     if (error) {
