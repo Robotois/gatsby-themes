@@ -10,7 +10,7 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => {
     );
   }
 
-  if (!process.env.STRIPE_PUBLIC_KEY) {
+  if (!process.env.GATSBY_STRIPE_PUBLIC_KEY) {
     throw Error(
       'You have not set stripe public key, check https://www.gatsbyjs.org/docs/environment-variables/',
     );

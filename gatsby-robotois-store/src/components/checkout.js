@@ -16,7 +16,7 @@ const styles = {
 
 const Checkout = class extends React.Component {
   componentDidMount() {
-    this.stripe = window.Stripe(process.env.STRIPE_PUBLIC_KEY, {
+    this.stripe = window.Stripe(process.env.GATSBY_STRIPE_PUBLIC_KEY, {
       betas: ['checkout_beta_4'],
     });
   }
@@ -25,8 +25,8 @@ const Checkout = class extends React.Component {
     const { sku } = this.props;
     const { error } = await this.stripe.redirectToCheckout({
       items: [{ sku, quantity: 1 }],
-      successUrl: `${process.env.STRIPE_SUCCESS_URL}`,
-      cancelUrl: `${process.env.STRIPE_CANCEL_URL}`,
+      successUrl: `${process.env.GATSBY_STRIPE_SUCCESS_URL}`,
+      cancelUrl: `${process.env.GATSBY_STRIPE_CANCEL_URL}`,
       billingAddressCollection: 'required',
     });
     if (error) {
