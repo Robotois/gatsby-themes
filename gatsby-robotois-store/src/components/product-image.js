@@ -18,15 +18,11 @@ export default function ProductImage({ image }) {
       }
     }
   `);
-
-  return (
-    <Img
-      fixed={
-        data.allImageSharp.edges.find(element => {
-          return element.node.fixed.src.split('/').pop() === image;
-        }).node.fixed
-      }
-      alt="imagen del componente del kit"
-    />
-  );
+  const fixed = data.allImageSharp.edges.find(element => {
+    return element.node.fixed.src.split('/').pop() === image;
+  });
+  if (!fixed) {
+    return null;
+  }
+  return <Img fixed={fixed.node.fixed} alt="imagen del componente del kit" />;
 }

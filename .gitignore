@@ -4,3 +4,8 @@ public
 .cache
 .DS*
 *.log
+
+# dotenv environment variables files
+.env
+.env.development
+.env.production

@@ -21,13 +21,14 @@ const types = {
   },
 };
 
-function Section({ children, type, centerContent }) {
+function Section({ children, type, centerContent, ...rest }) {
   return (
     <div
       sx={{
         ...styles,
         ...types[type || 'light'],
       }}
+      {...rest}
     >
       {children}
     </div>

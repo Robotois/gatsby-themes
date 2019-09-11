@@ -9,7 +9,7 @@ function Layout({ children }) {
   return (
     <ThemeLayout>
       <Header>
-        <Link to={meta.basePath}>{meta.title}</Link>
+        <Link to="/">{meta.title}</Link>
       </Header>
       <Main>
         <Container>{children}</Container>

@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+// eslint-disable-next-line
 import React from 'react';
 import Section from './section';
 import { Styled } from 'theme-ui';
@@ -13,11 +14,22 @@ const sharedStyles = {
   justifyContent: 'center',
 };
 
+const mobile = {
+  '@media (max-width: 800px)': {
+    fontSize: 8,
+    padding: 3,
+    borderRight: 'none',
+  },
+};
+
 function TextComponent({ name, description = 'Some description' }) {
   return (
     <div
       sx={{
         width: 'description',
+        '@media (max-width: 800px)': {
+          width: '100%',
+        },
       }}
     >
       <Styled.h3>{name}</Styled.h3>
@@ -29,11 +41,19 @@ function TextComponent({ name, description = 'Some description' }) {
 function Slide(props) {
   const { invert, name, description, image, ...rest } = props;
   return (
-    <Section {...rest}>
+    <Section
+      {...rest}
+      css={{
+        '@media (max-width: 800px)': {
+          flexDirection: invert ? 'column-reverse' : 'column',
+        },
+      }}
+    >
       <div
         sx={{
           borderRight: '4px solid #3525E6',
           ...sharedStyles,
+          ...mobile,
         }}
       >
         {invert ? (
@@ -45,6 +65,7 @@ function Slide(props) {
       <div
         sx={{
           ...sharedStyles,
+          ...mobile,
         }}
       >
         {invert ? (
@@ -62,6 +83,9 @@ function Slide(props) {
           position: 'relative',
           top: 0,
           right: '50%',
+          '@media (max-width: 800px)': {
+            display: 'none',
+          },
         }}
       />
     </Section>

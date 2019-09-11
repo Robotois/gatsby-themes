@@ -1,15 +1,29 @@
 /** @jsx jsx */
+import { useStaticQuery, graphql } from 'gatsby';
 import { jsx } from 'theme-ui';
 import { Styled } from 'theme-ui';
-import Button from './button';
+import Checkout from './checkout';
 import Slide from './slide';
 import Section from './section';
 
-const BuyButton = ({ type }) => {
-  return <Button type={type} onClick={() => alert(1232)} />;
-};
+function showReleaseDate(date) {
+  return new Date(date) > new Date();
+}
 
-function Product({ name, releaseDate, description, videoId, components }) {
+function Product({ name, releaseDate, description, videoId, components, sku }) {
+  const data = useStaticQuery(graphql`
+    query {
+      stripeSku(id: { eq: "sku_FZoNf75AsXfXtd" }) {
+        id
+        price
+      }
+    }
+  `);
+  const price = (data.stripeSku.price / 100).toLocaleString('es-MX', {
+    style: 'currency',
+    currency: 'MXN',
+  });
+
   return (
     <div
       sx={{
@@ -41,12 +55,12 @@ function Product({ name, releaseDate, description, videoId, components }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            bg: 'rgba(255,255,255,.6)',
+            bg: 'rgba(255,255,255,.0)',
           }}
         >
           <div
             sx={{
-              bg: 'rgba(255,255,255,.90)',
+              bg: 'rgba(255,255,255,.8)',
               padding: 48,
               borderRadius: 8,
               display: 'flex',
@@ -56,7 +70,7 @@ function Product({ name, releaseDate, description, videoId, components }) {
             }}
           >
             <Styled.h1 sx={{ margin: 3 }}>{name}</Styled.h1>
-            <BuyButton type="primary" />
+            <Checkout type="primary" sku={sku} />
           </div>
         </div>
       </div>
@@ -73,11 +87,27 @@ function Product({ name, releaseDate, description, videoId, components }) {
         );
       })}
       <Section type="primary">
-        <div>
+        <div
+          css={{
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          {showReleaseDate(releaseDate) ? (
+            <h1 sx={{ textAlign: 'center', color: 'white' }}>
+              Disponible para envio el{' '}
+              {new Date(releaseDate).toLocaleDateString('es-MX', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric',
+              })}
+            </h1>
+          ) : null}
           <h2 sx={{ textAlign: 'center', color: 'white', fontSize: 5 }}>
-            $1,503.00 MXN
+            MX{price}
           </h2>
-          <BuyButton type="light" />
+          <Checkout type="light" sku={sku} />
         </div>
       </Section>
     </div>
