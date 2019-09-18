@@ -8,5 +8,12 @@ module.exports = {
         basePath: 'tienda',
       },
     },
+    {
+      resolve: 'gatsby-robotois-academy',
+      options: {
+        contentPath: 'courses',
+        basePath: 'academia',
+      },
+    },
   ],
 };

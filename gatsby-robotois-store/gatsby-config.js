@@ -30,6 +30,7 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => {
       {
         resolve: 'gatsby-source-filesystem',
         options: {
+          name: 'products',
           path: contentPath,
         },
       },

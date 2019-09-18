@@ -75,7 +75,7 @@ function Product({ name, releaseDate, description, videoId, components, sku }) {
         </div>
       </div>
       <Styled.h2 sx={{ margin: 4, textAlign: 'center' }}>Descripción</Styled.h2>
-      {components.map((component, idx) => {
+      {components && components.map((component, idx) => {
         const invert = !!(idx % 2);
         return (
           <Slide

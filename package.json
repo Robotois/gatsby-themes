@@ -3,6 +3,7 @@
   "workspaces": [
     "site",
     "gatsby-robotois-arduino",
-    "gatsby-robotois-store"
+    "gatsby-robotois-store",
+    "gatsby-robotois-academy"
   ]
 }
