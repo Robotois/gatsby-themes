@@ -13,6 +13,9 @@ function CoursesTemplate() {
           releaseDate(formatString: "MMMM D, YYYY")
           description
           slug
+          lessons {
+            slug
+          }
         }
       }
     }

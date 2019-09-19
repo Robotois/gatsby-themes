@@ -4,6 +4,7 @@ const heading = {
   fontWeight: 'heading',
   color: 'title',
 };
+// eslint-disable-next-line 
 const border = '1px solid red';
 const dark = '#1A2232';
 
@@ -62,7 +63,7 @@ export default {
       flexDirection: 'row',
       display: 'flex',
       alignItems: 'center',
-      '& a:first-child': {
+      '& a:first-of-type': {
         width: 400
       },
       '& a': {
@@ -108,7 +109,6 @@ export default {
     ul: {
       listStyle: 'none',
       padding: 0,
-      // border
     },
     li: {
       py: 0,
@@ -121,7 +121,7 @@ export default {
         lineHeight: 1.6,
         fontWeight: 300,
         opacity: 0.7,
-        mb: 3,
+        // mb: 3,
         fontFamily: 'system-ui, sans-serif',
       },
       ".active": {

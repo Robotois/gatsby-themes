@@ -8,8 +8,6 @@ import './layout.css';
 function AppLayout(props) {
   const meta = useSiteMetadata();
   const links = meta.headerLinks || [];
-  console.log(meta);
-
   return (
     <Layout>
       <HeaderWrapper>

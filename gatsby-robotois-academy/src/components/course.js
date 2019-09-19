@@ -1,24 +1,10 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
 import { Styled, Flex, jsx } from 'theme-ui';
-const data = [{
-  id: 1,
-  title: 'Introduccion',
-  description: 'Summary. Lorem ipsum dolor sit amet.',
-},
-{
-  id: 2,
-  title: 'Introduccion II',
-  description: 'Summary. Lorem ipsum dolor sit amet.',
-},
-{
-  id: 3,
-  title: 'Introduccion III',
-  description: 'Summary. Lorem ipsum dolor sit amet.',
-}]
 
-function Course({ course }) {
-  const videos = course.videos || data;
+function Course({ course, currentLessonId }) {
+  const { lessons } = course;
+  const currentLesson = lessons.find(l => l.id === currentLessonId);
   return (
     <Flex
       sx={{
@@ -37,15 +23,15 @@ function Course({ course }) {
         }}
       >
         <Styled.ul role="menu" sx={{ pb: 14 }}>
-          {videos.map(video => {
+          {lessons.map(lesson => {
             return (
-              <Styled.li key={video.id}>
+              <Styled.li key={lesson.id}>
                 <Link
                   role="menuitem"
                   activeClassName="active"
-                  to={course.slug}>
-                  <Styled.h2 >{video.title}</Styled.h2>
-                  <p className="summary">{video.description}</p>
+                  to={`${course.slug}${lesson.slug}`}>
+                  <Styled.h2 >{lesson.title}</Styled.h2>
+                  <p className="summary">{lesson.description}</p>
                 </Link>
               </Styled.li>
             );
@@ -53,14 +39,17 @@ function Course({ course }) {
         </Styled.ul>
       </nav>
       <section>
-        <div sx={{ width: '100%', height: 500, border: '1px solid red', bg: 'primary' }}>video</div>
+        <div sx={{ width: '100%', height: 500 }}>
+          <iframe
+            frameBorder="0"
+            height="100%"
+            width="100%"
+            title="Video"
+            src={`https://youtube.com/embed/${currentLesson.videoId}?autoplay=0&controls=1&showinfo=0&autohide=0`}
+          />
+        </div>
         <article sx={{ p: 8, pb: 14 }}>
-          <Styled.p>
-            Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin.
-          </Styled.p>
-          <Styled.p>
-            Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump.
-          </Styled.p>
+          {currentLesson.content.map((content, idx) => <Styled.p key={idx}>{content}</Styled.p>)}
         </article>
       </section>
     </Flex>
