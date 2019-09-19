@@ -84,15 +84,15 @@ export default {
     },
     h1: {
       ...heading,
-      fontSize: 6,
+      fontSize: 8,
     },
     h2: {
       ...heading,
-      fontSize: 5,
+      fontSize: 6,
     },
     h3: {
       ...heading,
-      fontSize: 4,
+      fontSize: 5,
     },
     h4: {
       ...heading,
@@ -106,12 +106,8 @@ export default {
       ...heading,
       fontSize: 1,
     },
-    ul: {
-      listStyle: 'none',
-      padding: 0,
-    },
     li: {
-      py: 0,
+      // py: 0,
       display: "flex",
       justifyContent: "flex-start",
       alignItems: "center",
@@ -136,7 +132,6 @@ export default {
         borderColor: "background",
         fontSize: 5,
         width: "100%",
-        color: "primary",
         textDecoration: "none",
       },
       p: {

@@ -9,15 +9,16 @@ function Course({ course, currentLessonId }) {
     <Flex
       sx={{
         p: 3,
-        //display: ["flex", "none"],
-        // visibility: ["visible", "hidden"],
         width: "100%",
         justifyContent: "space-between",
-        alignItems: "center",
       }}
     >
       <nav
         sx={{
+          pt: 11,
+          display: ["none", "flex"],
+          visibility: ["hidden", "visible"],
+          flex: 1,
           // transform: [`translateX(${isOpen ? "0" : "-100%"})`, "none"],
           transition: "300ms cubic-bezier(1, 0, 0, 1)",
         }}
@@ -30,7 +31,7 @@ function Course({ course, currentLessonId }) {
                   role="menuitem"
                   activeClassName="active"
                   to={`${course.slug}${lesson.slug}`}>
-                  <Styled.h2 >{lesson.title}</Styled.h2>
+                  <Styled.h3 >{lesson.title}</Styled.h3>
                   <p className="summary">{lesson.description}</p>
                 </Link>
               </Styled.li>
@@ -38,7 +39,8 @@ function Course({ course, currentLessonId }) {
           })}
         </Styled.ul>
       </nav>
-      <section>
+      <section sx={{ flex: 3 }}>
+        <Styled.h1 sx={{ textAlign: 'center' }}>{course.title}</Styled.h1>
         <div sx={{ width: '100%', height: 500 }}>
           <iframe
             frameBorder="0"
