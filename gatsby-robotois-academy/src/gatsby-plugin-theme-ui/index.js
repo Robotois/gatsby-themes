@@ -7,10 +7,13 @@ const heading = {
 // eslint-disable-next-line 
 const border = '1px solid red';
 const dark = '#1A2232';
+const light = '#FAFAFA';
+const purpleRobotois = '#3227b6';
+
 
 export default {
-  // useCustomProperties: true,
-  // initialColorMode: "dark",
+  useCustomProperties: true,
+  initialColorMode: "default",
   breakpoints: ["992px", "1200px", "1920px"],
   space: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   sizes: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
@@ -31,20 +34,36 @@ export default {
     heading: "inherit",
   },
   colors: {
-    grayText: '#e6e6e6',
-    background: dark,
-    backgroundLighten10: '#232B3B',
-    backgroundLighten20: '#2C3648',
-    primary: '#A085FF',
+    primary: purpleRobotois,
     secondary: '#85FFD0',
     error: 'salmon',
+    grayText: '#e6e6e6',
+    background: light,
+    backgroundLighten10: '#FFFFFF',
+    backgroundLighten20: '#2C3648',
     purpleText: '#a085ff',
-    purpleRobotois: '#3227b6',
     text: 'white',
     primaryLighten10: "#9D82FF",
     primaryLighten50: "#B298FF",
     primaryLighten70: "#D2C8FF",
-    title: 'rgba(255, 255, 255, 0.9);',
+    title: 'black',
+    modes: {
+      dark: {
+        primary: '#A085FF',
+        secondary: '#85FFD0',
+        error: 'salmon',
+        grayText: '#e6e6e6',
+        background: dark,
+        backgroundLighten10: '#232B3B',
+        backgroundLighten20: '#2C3648',
+        purpleText: '#a085ff',
+        text: 'white',
+        primaryLighten10: "#9D82FF",
+        primaryLighten50: "#B298FF",
+        primaryLighten70: "#D2C8FF",
+        title: 'rgba(255, 255, 255, 0.9)',
+      }
+    }
   },
   styles: {
     root: {
@@ -58,7 +77,7 @@ export default {
       ...heading,
       color: 'text',
       bg: 'brackground',
-      height: 60,
+      height: 80,
       px: 3,
       flexDirection: 'row',
       display: 'flex',
@@ -69,7 +88,7 @@ export default {
       '& a': {
         textDecoration: 'none',
         color: 'primary',
-        mx: 10
+        mx: 5,
       },
       '& div': {
         width: [0, '100%'],
@@ -107,7 +126,6 @@ export default {
       fontSize: 1,
     },
     li: {
-      // py: 0,
       display: "flex",
       justifyContent: "flex-start",
       alignItems: "center",
@@ -117,13 +135,15 @@ export default {
         lineHeight: 1.6,
         fontWeight: 300,
         opacity: 0.7,
-        // mb: 3,
         fontFamily: 'system-ui, sans-serif',
       },
       ".active": {
         borderLeft: "3px solid",
         borderColor: "primary",
         backgroundColor: "backgroundLighten10",
+        '& h3': {
+          color: 'primary',
+        }
       },
       a: {
         px: 5,

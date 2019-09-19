@@ -31,7 +31,7 @@ function Course({ course, currentLessonId }) {
                   role="menuitem"
                   activeClassName="active"
                   to={`${course.slug}${lesson.slug}`}>
-                  <Styled.h3 >{lesson.title}</Styled.h3>
+                  <Styled.h3>{lesson.title}</Styled.h3>
                   <p className="summary">{lesson.description}</p>
                 </Link>
               </Styled.li>
