@@ -35,7 +35,7 @@ exports.createResolvers = ({ createResolvers }, options) => {
 
   // Quick-and-dirty helper to convert strings into URL-friendly slugs.
   const slugify = str => {
-    const slug = str
+    const slug = str && str
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-') // si tiene algun caracter raro en el nombre se sustituye por -
       .replace(/(^-|-$)+/g, ''); // si empieza o termina con - se limpia
