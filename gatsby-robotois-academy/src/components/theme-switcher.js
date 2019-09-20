@@ -3,8 +3,8 @@ import { useColorMode } from 'theme-ui';
 import Switch from 'react-switch';
 
 export default function ThemeSwitcher() {
-  const [colorMode, setColorMode] = useColorMode('default');
-  const [checked, setChecked] = useState(true);
+  const [colorMode, setColorMode] = useColorMode('light');
+  const [checked, setChecked] = useState(colorMode === 'light');
 
   return (
     <div style={{
@@ -14,7 +14,7 @@ export default function ThemeSwitcher() {
     }}>
       <Switch
         onChange={value => {
-          setColorMode(colorMode === 'default' ? 'dark' : 'default');
+          setColorMode(colorMode === 'light' ? 'dark' : 'light');
           setChecked(value)
         }}
         offColor="#A085FF"
