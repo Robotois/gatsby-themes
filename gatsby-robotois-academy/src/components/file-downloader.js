@@ -12,7 +12,8 @@ export default function FileDownloader({ link }) {
       p: 4,
       cursor: 'pointer',
       borderRadius: 5,
-      color: 'primary'
+      color: 'primary',
+      fontFamily: 'system-ui, sans-serif',
     }}>
       {meta.downloadFilesLabel}
     </a>
