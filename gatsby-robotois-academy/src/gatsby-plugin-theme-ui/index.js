@@ -35,11 +35,14 @@ export default {
   },
   colors: {
     primary: purpleRobotois,
-    secondary: '#85FFD0',
+    titleText: purpleRobotois,
+    secondary: 'rgb(23, 169, 116)',
     error: 'salmon',
     grayText: '#e6e6e6',
     background: light,
-    backgroundLighten10: '#FFFFFF',
+    backgroundHover: 'white',
+    hoverBorder: '#D2C8FF',
+    backgroundLighten10: 'white',
     backgroundLighten20: '#2C3648',
     purpleText: '#a085ff',
     text: 'white',
@@ -54,6 +57,8 @@ export default {
         error: 'salmon',
         grayText: '#e6e6e6',
         background: dark,
+        backgroundHover: dark,
+        hoverBorder: '#232B3B',
         backgroundLighten10: '#232B3B',
         backgroundLighten20: '#2C3648',
         purpleText: '#a085ff',
@@ -62,6 +67,7 @@ export default {
         primaryLighten50: "#B298FF",
         primaryLighten70: "#D2C8FF",
         title: 'rgba(255, 255, 255, 0.9)',
+        titleText: 'rgba(255, 255, 255, 0.9)',
       }
     }
   },
@@ -142,7 +148,7 @@ export default {
         borderColor: "primary",
         backgroundColor: "backgroundLighten10",
         '& h3': {
-          color: 'primary',
+          color: 'titleText',
         }
       },
       a: {
@@ -162,7 +168,13 @@ export default {
         fontSize: 0,
       },
       ":hover": {
-        a: { borderColor: "backgroundLighten10" },
+        a: {
+          borderColor: "hoverBorder",
+          '& h2': {
+            color: 'titleText',
+          },
+          bg: 'backgroundHover'
+        },
         ".active": {
           borderColor: "primary",
         },
