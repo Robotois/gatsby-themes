@@ -14,7 +14,7 @@
         ],
         "code": "var y = 8",
         "codeType": "c",
-        "file": "www.file.com"
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
       },
       {
         "videoId": "yUauZDn0XHw2",
@@ -25,8 +25,7 @@
           "Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump."
         ],
         "code": "var y = 8",
-        "codeType": "c",
-        "file": "www.file.com"
+        "codeType": "c"
       },
       {
         "videoId": "yUauZDn0XHw3",
@@ -38,8 +37,7 @@
           "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin."
         ],
         "code": "var y = 8",
-        "codeType": "c",
-        "file": "www.file.com"
+        "codeType": "c"
       }
     ]
   },

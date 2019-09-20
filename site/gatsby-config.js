@@ -13,6 +13,7 @@ module.exports = {
       options: {
         contentPath: 'courses',
         basePath: 'academia',
+        title: 'Academia Robotois'
       },
     },
   ],
