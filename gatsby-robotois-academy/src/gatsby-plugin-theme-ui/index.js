@@ -13,7 +13,7 @@ const purpleRobotois = '#3227b6';
 
 export default {
   useCustomProperties: true,
-  initialColorMode: "default",
+  initialColorMode: 'light',
   breakpoints: ["992px", "1200px", "1920px"],
   space: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   sizes: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],

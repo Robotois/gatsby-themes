@@ -1,10 +1,11 @@
-module.exports = ({ contentPath = 'data', basePath = '/' }) => {
+module.exports = ({ contentPath = 'data', basePath = '/', title, headerLinks, downloadFilesLabel }) => {
   return {
     siteMetadata: {
-      title: 'ROBOTOIS ACADEMY',
+      title: title || 'ROBOTOIS ACADEMY',
       headline: 'Academia Robotois',
+      downloadFilesLabel: downloadFilesLabel || 'Descargar Archivos',
       basePath,
-      headerLinks: [
+      headerLinks: headerLinks || [
         {
           title: 'Curso',
           link: '/curso'

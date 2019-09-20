@@ -15,6 +15,7 @@
     "gatsby-plugin-theme-ui": "^0.2.41",
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-transformer-json": "^2.2.8",
+    "react-switch": "^5.0.1",
     "theme-ui": "^0.2.42"
   }
 }

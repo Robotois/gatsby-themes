@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
 import { Styled, Flex, jsx } from 'theme-ui';
+import FileDownloader from './file-downloader'
 
 function Course({ course, currentLessonId }) {
   const { lessons } = course;
@@ -50,9 +51,17 @@ function Course({ course, currentLessonId }) {
             src={`https://youtube.com/embed/${currentLesson.videoId}?autoplay=0&controls=1&showinfo=0&autohide=0`}
           />
         </div>
-        <article sx={{ p: 8, pb: 14 }}>
+        <article sx={{ p: 8, pb: 6 }}>
           {currentLesson.content.map((content, idx) => <Styled.p key={idx}>{content}</Styled.p>)}
         </article>
+
+        <Flex sx={{
+          justifyContent: 'center',
+          pb: 10
+        }}>
+          {
+            currentLesson.file ? <FileDownloader /> : null}
+        </Flex>
       </section>
     </Flex>
   );
