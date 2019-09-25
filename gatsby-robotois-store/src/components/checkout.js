@@ -39,7 +39,10 @@ const Checkout = class extends React.Component {
       <button
         sx={{
           ...styles,
-          variant: `buttons.${type}` || 'button.primary',
+          bg: type === 'primary' ? '#3227b6' : 'white',
+          color: type === 'primary' ? 'text' : '#3227b6',
+          fontFamily: 'system-ui, sans-serif',
+          fontSize: 6,
         }}
         onClick={event => this.redirectToCheckout(event)}
       >

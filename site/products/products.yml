@@ -17,3 +17,98 @@
     - name: Micro motorreductor de metal
       image: motor.png
       description: Motores que brindan precisión de desplazamiento al robot.
+- name: Kit Arduino3
+  image: complete.png
+  description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+  release_date: 2019-08-16
+  videoId: yUauZDn0XHw
+  sku: sku_FZoNf75AsXfXtd
+  components:
+    - name: Kit Arduino
+      image: complete.png
+      description: Aprende electrónica con el kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+    - name: Placa UNO R3
+      image: elego.png
+      description: ELEGOO UNOR3 usa un ATMEGA16U2 como Chip de interfaz serie y un ATmega328P como microcontrolador haciéndolo más rápido en las transferencias y almacenamiento de datos y con más memoria.
+    - name: Chip L298N
+      image: driver.png
+      description: El módulo permite controlar el sentido y velocidad de giro de motores.
+    - name: Micro motorreductor de metal
+      image: motor.png
+      description: Motores que brindan precisión de desplazamiento al robot.
+- name: Kit Arduino3
+  image: complete.png
+  description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+  release_date: 2019-08-16
+  videoId: yUauZDn0XHw
+  sku: sku_FZoNf75AsXfXtd
+  components:
+    - name: Kit Arduino
+      image: complete.png
+      description: Aprende electrónica con el kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+    - name: Placa UNO R3
+      image: elego.png
+      description: ELEGOO UNOR3 usa un ATMEGA16U2 como Chip de interfaz serie y un ATmega328P como microcontrolador haciéndolo más rápido en las transferencias y almacenamiento de datos y con más memoria.
+    - name: Chip L298N
+      image: driver.png
+      description: El módulo permite controlar el sentido y velocidad de giro de motores.
+    - name: Micro motorreductor de metal
+      image: motor.png
+      description: Motores que brindan precisión de desplazamiento al robot.
+- name: Kit Arduino3
+  image: complete.png
+  description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+  release_date: 2019-08-16
+  videoId: yUauZDn0XHw
+  sku: sku_FZoNf75AsXfXtd
+  components:
+    - name: Kit Arduino
+      image: complete.png
+      description: Aprende electrónica con el kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+    - name: Placa UNO R3
+      image: elego.png
+      description: ELEGOO UNOR3 usa un ATMEGA16U2 como Chip de interfaz serie y un ATmega328P como microcontrolador haciéndolo más rápido en las transferencias y almacenamiento de datos y con más memoria.
+    - name: Chip L298N
+      image: driver.png
+      description: El módulo permite controlar el sentido y velocidad de giro de motores.
+    - name: Micro motorreductor de metal
+      image: motor.png
+      description: Motores que brindan precisión de desplazamiento al robot.
+- name: Kit Arduino3
+  image: complete.png
+  description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+  release_date: 2019-08-16
+  videoId: yUauZDn0XHw
+  sku: sku_FZoNf75AsXfXtd
+  components:
+    - name: Kit Arduino
+      image: complete.png
+      description: Aprende electrónica con el kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+    - name: Placa UNO R3
+      image: elego.png
+      description: ELEGOO UNOR3 usa un ATMEGA16U2 como Chip de interfaz serie y un ATmega328P como microcontrolador haciéndolo más rápido en las transferencias y almacenamiento de datos y con más memoria.
+    - name: Chip L298N
+      image: driver.png
+      description: El módulo permite controlar el sentido y velocidad de giro de motores.
+    - name: Micro motorreductor de metal
+      image: motor.png
+      description: Motores que brindan precisión de desplazamiento al robot.
+- name: Kit Arduino3
+  image: complete.png
+  description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+  release_date: 2019-08-16
+  videoId: yUauZDn0XHw
+  sku: sku_FZoNf75AsXfXtd
+  components:
+    - name: Kit Arduino
+      image: complete.png
+      description: Aprende electrónica con el kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
+    - name: Placa UNO R3
+      image: elego.png
+      description: ELEGOO UNOR3 usa un ATMEGA16U2 como Chip de interfaz serie y un ATmega328P como microcontrolador haciéndolo más rápido en las transferencias y almacenamiento de datos y con más memoria.
+    - name: Chip L298N
+      image: driver.png
+      description: El módulo permite controlar el sentido y velocidad de giro de motores.
+    - name: Micro motorreductor de metal
+      image: motor.png
+      description: Motores que brindan precisión de desplazamiento al robot.

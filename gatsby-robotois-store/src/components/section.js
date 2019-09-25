@@ -11,13 +11,13 @@ const styles = {
 
 const types = {
   light: {
-    backgroundColor: 'white',
+    bg: 'background',
   },
   gray: {
-    backgroundColor: 'gray.0',
+    bg: 'backgroundLighten20',
   },
   primary: {
-    backgroundColor: 'primary',
+    bg: 'primary',
   },
 };
 

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { useStaticQuery, graphql } from 'gatsby';
-import { jsx } from 'theme-ui';
-import { Styled } from 'theme-ui';
+import { jsx, Flex, Styled } from 'theme-ui';
 import Checkout from './checkout';
 import Slide from './slide';
 import Section from './section';
@@ -25,52 +24,57 @@ function Product({ name, releaseDate, description, videoId, components, sku }) {
   });
 
   return (
-    <div
+    <Flex
       sx={{
-        width: '98vw',
-        height: 640,
+        flexDirection: 'column',
       }}
     >
       <div
         sx={{
-          width: '100%',
-          height: '100%',
-          position: 'relative',
+          height: 640,
         }}
       >
-        <iframe
-          frameBorder="0"
-          height="100%"
-          width="100%"
-          title="Video"
-          src={`https://youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&showinfo=0&autohide=0&loop=1&playlist=${videoId}`}
-        />
         <div
           sx={{
             width: '100%',
-            height: 640,
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            bg: 'rgba(255,255,255,.0)',
+            height: '100%',
+            position: 'relative',
           }}
         >
+          <iframe
+            frameBorder="0"
+            height="100%"
+            width="100%"
+            title="Video"
+            src={`https://youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&showinfo=0&autohide=0&loop=1&playlist=${videoId}`}
+          />
           <div
             sx={{
-              bg: 'rgba(255,255,255,.8)',
-              padding: 48,
-              borderRadius: 8,
+              width: '100%',
+              height: 640,
+              position: 'absolute',
+              top: 0,
+              left: 0,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              flexDirection: 'column',
+              bg: 'rgba(255,255,255,0)',
             }}
           >
-            <Styled.h1 sx={{ margin: 3 }}>{name}</Styled.h1>
-            <Checkout type="primary" sku={sku} />
+            <div
+              sx={{
+                bg: 'rgba(255,255,255,.8)',
+                padding: 48,
+                borderRadius: 8,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'column',
+              }}
+            >
+              <Styled.h1 sx={{ margin: 3, color: '#3227b6', fontSize: 11 }}>{name}</Styled.h1>
+              <Checkout type="primary" sku={sku} />
+            </div>
           </div>
         </div>
       </div>
@@ -110,7 +114,7 @@ function Product({ name, releaseDate, description, videoId, components, sku }) {
           <Checkout type="light" sku={sku} />
         </div>
       </Section>
-    </div>
+    </Flex>
   );
 }
 

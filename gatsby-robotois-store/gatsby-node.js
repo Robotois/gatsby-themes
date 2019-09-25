@@ -21,6 +21,7 @@ exports.sourceNodes = ({ actions }) => {
       id: ID!
       name: String!
       description: String!
+      image: String
       releaseDate: Date! @dateformat @proxy(from: "release_date")
       videoId: String!
       sku: String!

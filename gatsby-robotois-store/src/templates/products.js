@@ -10,6 +10,7 @@ function ProductsTemplate() {
         nodes {
           id
           name
+          image
           releaseDate(formatString: "MMMM D, YYYY")
           description
           slug

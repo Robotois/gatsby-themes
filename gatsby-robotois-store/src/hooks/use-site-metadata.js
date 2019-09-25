@@ -6,8 +6,11 @@ const useSiteMetadata = () => {
       site {
         siteMetadata {
           title
-          headline
           basePath
+          headerLinks {
+            title
+            link
+          }
         }
       }
     }

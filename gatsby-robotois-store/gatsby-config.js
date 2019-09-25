@@ -3,7 +3,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-module.exports = ({ contentPath = 'data', basePath = '/' }) => {
+module.exports = ({ contentPath = 'data', basePath = '/', title, headerLinks }) => {
   if (!process.env.STRIPE_SECRET_KEY) {
     throw Error(
       'You have not set stripe secret key, check https://www.gatsbyjs.org/docs/environment-variables/',
@@ -21,6 +21,16 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => {
       title: 'ROBOTOIS',
       headline: 'Kit disponibles',
       basePath,
+      headerLinks: headerLinks || [
+        {
+          title: 'Academia',
+          link: '/academia'
+        },
+        {
+          title: 'Plataforma',
+          link: '/plataforma'
+        }
+      ]
     },
     plugins: [
       'gatsby-plugin-theme-ui',

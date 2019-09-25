@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Header as HeaderWrapper, Main, Container } from 'theme-ui';
+import { Layout, Header, Main, Container } from 'theme-ui';
 import { Link } from 'gatsby';
 import useSiteMetadata from '../hooks/use-site-metadata';
 import ThemeSwitcher from './theme-switcher';
@@ -10,11 +10,11 @@ function AppLayout(props) {
   const links = meta.headerLinks || [];
   return (
     <Layout>
-      <HeaderWrapper>
+      <Header>
         <Link to="/">{meta.title}</Link>
         <div />
         {links.map(l => <Link to={l.link} key={l.link}>{l.title}</Link>)}
-      </HeaderWrapper>
+      </Header>
       <Main>
         <Container>{props.children}</Container>
       </Main>

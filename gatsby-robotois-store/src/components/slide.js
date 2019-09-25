@@ -26,10 +26,7 @@ function TextComponent({ name, description = 'Some description' }) {
   return (
     <div
       sx={{
-        width: 'description',
-        '@media (max-width: 800px)': {
-          width: '100%',
-        },
+        width: ['90%', 300, 400],
       }}
     >
       <Styled.h3>{name}</Styled.h3>
@@ -59,8 +56,8 @@ function Slide(props) {
         {invert ? (
           <TextComponent name={name} description={description} />
         ) : (
-          <ProductImage image={image} />
-        )}
+            <ProductImage image={image} />
+          )}
       </div>
       <div
         sx={{
@@ -71,8 +68,8 @@ function Slide(props) {
         {invert ? (
           <ProductImage image={image} />
         ) : (
-          <TextComponent name={name} description={description} />
-        )}
+            <TextComponent name={name} description={description} />
+          )}
       </div>
       <div
         sx={{

@@ -1,21 +1,29 @@
+/** @jsx jsx */
+import { Layout, Header, Main, jsx } from 'theme-ui';
+// eslint-disable-next-line
 import React from 'react';
-import { Layout as ThemeLayout, Header, Main, Container } from 'theme-ui';
 import { Link } from 'gatsby';
 import useSiteMetadata from '../hooks/use-site-metadata';
+import ThemeSwitcher from './theme-switcher';
+import './layout.css';
 
-function Layout({ children }) {
+function AppLayout({ children }) {
   const meta = useSiteMetadata();
+  const links = meta.headerLinks || [];
 
   return (
-    <ThemeLayout>
+    <Layout>
       <Header>
         <Link to="/">{meta.title}</Link>
+        <div />
+        {links.map(l => <Link to={l.link} key={l.link}>{l.title}</Link>)}
       </Header>
       <Main>
-        <Container>{children}</Container>
+        <div style={{ width: '99vw' }}>{children}</div>
       </Main>
-    </ThemeLayout>
+      <ThemeSwitcher />
+    </Layout>
   );
 }
 
-export default Layout;
+export default AppLayout;

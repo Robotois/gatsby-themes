@@ -43,7 +43,7 @@ export default {
     backgroundHover: 'white',
     hoverBorder: '#D2C8FF',
     backgroundLighten10: 'white',
-    backgroundLighten20: '#2C3648',
+    backgroundLighten20: '#F5F6F8',
     purpleText: '#a085ff',
     text: 'white',
     primaryLighten10: "#9D82FF",
@@ -159,6 +159,7 @@ export default {
         fontSize: 5,
         width: "100%",
         textDecoration: "none",
+        fontFamily: 'system-ui, sans-serif',
       },
       p: {
         color: 'title'
@@ -192,6 +193,7 @@ export default {
     a: {
       color: "primary",
       textDecoration: "none",
+      fontFamily: 'system-ui, sans-serif',
       ":hover": {
         color: "secondary",
         textDecoration: "underline",

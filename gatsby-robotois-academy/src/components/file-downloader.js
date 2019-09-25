@@ -4,16 +4,15 @@ import useSiteMetadata from '../hooks/use-site-metadata';
 
 export default function FileDownloader({ link }) {
   const meta = useSiteMetadata();
-  console.log(meta);
-
   return (
     <a href={link} sx={{
       border: '1px solid',
-      p: 4,
+      p: 3,
       cursor: 'pointer',
       borderRadius: 5,
       color: 'primary',
       fontFamily: 'system-ui, sans-serif',
+      textDecoration: "none",
     }}>
       {meta.downloadFilesLabel}
     </a>

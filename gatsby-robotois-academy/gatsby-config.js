@@ -2,13 +2,12 @@ module.exports = ({ contentPath = 'data', basePath = '/', title, headerLinks, do
   return {
     siteMetadata: {
       title: title || 'ROBOTOIS ACADEMY',
-      headline: 'Academia Robotois',
       downloadFilesLabel: downloadFilesLabel || 'Descargar Archivos',
       basePath,
       headerLinks: headerLinks || [
         {
-          title: 'Curso',
-          link: '/curso'
+          title: 'Tienda',
+          link: '/tienda'
         },
         {
           title: 'Plataforma',

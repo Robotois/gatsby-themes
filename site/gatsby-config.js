@@ -6,6 +6,17 @@ module.exports = {
       options: {
         contentPath: 'products',
         basePath: 'tienda',
+        title: 'Tienda Robotois',
+        headerLinks: [
+          {
+            title: 'Academia',
+            link: '/academia'
+          },
+          {
+            title: 'Plataforma',
+            link: '/plataforma'
+          }
+        ]
       },
     },
     {
@@ -13,7 +24,7 @@ module.exports = {
       options: {
         contentPath: 'courses',
         basePath: 'academia',
-        title: 'Academia Robotois'
+        title: 'Robotois'
       },
     },
   ],

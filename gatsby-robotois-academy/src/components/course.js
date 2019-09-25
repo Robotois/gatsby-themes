@@ -5,7 +5,10 @@ import FileDownloader from './file-downloader'
 
 function Course({ course, currentLessonId }) {
   const { lessons } = course;
-  const currentLesson = lessons.find(l => l.id === currentLessonId);
+  const currentIndex = lessons.findIndex(l => l.id === currentLessonId);
+  const currentLesson = lessons[currentIndex];
+  const nextLesson = lessons[currentIndex + 1];
+  const previousLesson = lessons[currentIndex - 1];
   return (
     <Flex
       sx={{
@@ -60,7 +63,32 @@ function Course({ course, currentLessonId }) {
           pb: 10
         }}>
           {
-            currentLesson.file ? <FileDownloader /> : null}
+            currentLesson.file ? <FileDownloader link={currentLesson.file} /> : null}
+        </Flex>
+        <Flex sx={{
+          justifyContent: 'space-between',
+          pb: 10,
+        }}>
+          {
+            previousLesson ? <Link
+              sx={{
+                color: 'title',
+                textDecoration: 'underline',
+                fontFamily: 'system-ui, sans-serif',
+              }}
+              to={`${course.slug}${previousLesson.slug}`}>
+              {previousLesson.title}
+            </Link> : null}
+          {
+            nextLesson ? <Link
+              sx={{
+                color: 'title',
+                textDecoration: 'underline',
+                fontFamily: 'system-ui, sans-serif',
+              }}
+              to={`${course.slug}${nextLesson.slug}`}>
+              {nextLesson.title}
+            </Link> : null}
         </Flex>
       </section>
     </Flex>
