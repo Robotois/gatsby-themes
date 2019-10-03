@@ -10,7 +10,7 @@ export default function ThemeSwitcher() {
     <div style={{
       position: 'fixed',
       bottom: 10,
-      right: 20,
+      left: 20,
     }}>
       <Switch
         onChange={value => {
