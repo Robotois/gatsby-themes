@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-robotois-academy",
-  "version": "1.0.0",
+  "name": "@manduks/gatsby-robotois-academy",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
