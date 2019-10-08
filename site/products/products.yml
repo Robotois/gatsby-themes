@@ -17,7 +17,7 @@
     - name: Micro motorreductor de metal
       image: motor.png
       description: Motores que brindan precisión de desplazamiento al robot.
-- name: Kit Arduino3
+- name: Kit Arduino2
   image: complete.png
   description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
   release_date: 2019-08-16
@@ -55,7 +55,7 @@
     - name: Micro motorreductor de metal
       image: motor.png
       description: Motores que brindan precisión de desplazamiento al robot.
-- name: Kit Arduino3
+- name: Kit Arduino4
   image: complete.png
   description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
   release_date: 2019-08-16
@@ -74,7 +74,7 @@
     - name: Micro motorreductor de metal
       image: motor.png
       description: Motores que brindan precisión de desplazamiento al robot.
-- name: Kit Arduino3
+- name: Kit Arduino6
   image: complete.png
   description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
   release_date: 2019-08-16
@@ -93,10 +93,10 @@
     - name: Micro motorreductor de metal
       image: motor.png
       description: Motores que brindan precisión de desplazamiento al robot.
-- name: Kit Arduino3
+- name: Kit Arduino5
   image: complete.png
-  description: Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.
-  release_date: 2019-08-16
+  description: This is a random text.
+  #release_date: 2019-08-16
   videoId: yUauZDn0XHw
   sku: sku_FZoNf75AsXfXtd
   components:

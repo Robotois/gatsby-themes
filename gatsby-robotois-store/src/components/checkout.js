@@ -46,7 +46,7 @@ const Checkout = class extends React.Component {
         }}
         onClick={event => this.redirectToCheckout(event)}
       >
-        Comprar kit
+        Comprar
       </button>
     );
   }

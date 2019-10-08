@@ -1,5 +1,5 @@
 {
-  "name": "@manduks/gatsby-robotois-store",
+  "name": "gatsby-robotois-store",
   "version": "1.0.3",
   "license": "MIT",
   "main": "index.js",

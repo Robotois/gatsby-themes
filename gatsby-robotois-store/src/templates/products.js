@@ -22,7 +22,7 @@ function ProductsTemplate() {
   const products = data.allProduct.nodes;
 
   return (
-    <Layout>
+    <Layout hasSearch>
       <ProductList products={products} />
     </Layout>
   );
