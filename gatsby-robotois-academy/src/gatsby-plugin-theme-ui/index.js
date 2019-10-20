@@ -50,6 +50,7 @@ export default {
     primaryLighten50: "#B298FF",
     primaryLighten70: "#D2C8FF",
     title: 'black',
+    label: '#525f7f',
     modes: {
       dark: {
         primary: '#A085FF',
@@ -68,6 +69,7 @@ export default {
         primaryLighten70: "#D2C8FF",
         title: 'rgba(255, 255, 255, 0.9)',
         titleText: 'rgba(255, 255, 255, 0.9)',
+        label: 'rgba(255, 255, 255, 0.6)',
       }
     }
   },

@@ -37,6 +37,8 @@ function TextComponent({ name, description = 'Some description' }) {
 
 function Slide(props) {
   const { invert, name, description, image, ...rest } = props;
+  console.log(image);
+
   return (
     <Section
       {...rest}

@@ -24,7 +24,7 @@ const Success = () => (
         <Styled.h2> GRACIAS POR TU COMPRA </Styled.h2>
         <Styled.p>
           En unos momentos recibirás un email de robotois con la confirmacion de
-          tu compra y recibos de pago.
+          tu compra.
         </Styled.p>
         <Link
           to="/"
