@@ -8,8 +8,11 @@ import { navigate } from 'gatsby';
 import Barcode from 'react-barcode';
 
 
-const Success = (props) => {
-  const data = props.location.state.data.source;
+const OxxoPage = (props) => {
+  const data = props.location
+    && props.location.state
+    && props.location.state.data
+    && props.location.state.data.source;
 
   if (!data) {
     return navigate('/');
@@ -62,7 +65,11 @@ const Success = (props) => {
           </div>
           <div>
             <label>Valido hasta: </label>
-            <span>{data.oxxo.expires_after}</span>
+            <span>{new Date(data.oxxo.expires_after).toLocaleDateString('es-MX', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            })}</span>
           </div>
           <div>
             <label>Precio: </label>
@@ -90,4 +97,4 @@ const Success = (props) => {
   );
 }
 
-export default Success;
+export default OxxoPage;

@@ -6,7 +6,7 @@ import { Styled } from 'theme-ui';
 import Layout from '../components/layout';
 import { Link } from 'gatsby';
 
-const Success = () => (
+const SuccessPage = () => (
   <Layout>
     <div
       sx={{
@@ -54,4 +54,4 @@ const Success = () => (
   </Layout>
 );
 
-export default Success;
+export default SuccessPage;
