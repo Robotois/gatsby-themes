@@ -44,7 +44,7 @@ class CheckoutModal extends React.Component {
     try {
       const result = await this.stripe.createSource({
         type: 'oxxo',
-        amount: 180000,
+        amount: data.price,
         currency: 'mxn',
         owner: {
           name: data.name,

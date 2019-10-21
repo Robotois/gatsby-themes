@@ -142,7 +142,10 @@ export default function OxxoForm({ createOxxoSource }) {
               onClick={event => {
                 setLoading(true);
                 event.preventDefault();
-                createOxxoSource(formData);
+                createOxxoSource({
+                  ...formData,
+                  price: productData.price,
+                });
               }}
               disabled={loading}
             >

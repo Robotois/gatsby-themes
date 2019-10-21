@@ -5,6 +5,8 @@ import React from 'react';
 import { Styled } from 'theme-ui';
 import Layout from '../components/layout';
 import { navigate } from 'gatsby';
+import Barcode from 'react-barcode';
+
 
 const Success = (props) => {
   const data = props.location.state.data.source;
@@ -21,40 +23,42 @@ const Success = (props) => {
     <Layout>
       <div sx={{
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'center',
         flexDirection: 'column',
         fontFamily: 'system-ui, sans-serif',
-        px: [8, 0],
+        px: [8, 14],
         '& section': {
           py: [8, 4]
         }
       }}>
-
-        <img
-          sx={{
-            width: [300, 300, 400],
-          }}
-          src={require(`../images/oxxo.png`)}
-          alt="success"
-        />
-        <section sx={{
-          width: ['100%', 700],
+        <div >
+          <Styled.h1>Pago en efectivo</Styled.h1>
+          <img
+            sx={{
+              width: [400, 400, 400],
+            }}
+            src={require(`../images/oxxo.png`)}
+            alt="oxxo"
+          />
+        </div>
+        <div sx={{
+          lineHeight: 'body',
           '& label': {
             color: 'title',
             mr: 3,
-            fontSize: [4, 5],
+            fontSize: [5, 6],
           },
           '& span': {
             color: 'title',
-            fontSize: [4, 5],
-            fontWeight: 'body',
+            fontSize: [5, 6],
+            fontWeight: 'bold',
           }
         }}>
-          <Styled.h2>Presenta este documento en tu tienda OXXO mas cercana</Styled.h2>
-          <div>
-            <label>Referencia: </label>
-            <span>{data.oxxo.number}</span>
+          <div sx={{
+            mb: 8,
+          }}>
+            <Barcode value={data.oxxo.number} width={2} height={160} />
           </div>
           <div>
             <label>Valido hasta: </label>
@@ -64,25 +68,23 @@ const Success = (props) => {
             <label>Precio: </label>
             <span>MX{price}</span>
           </div>
-          <div>
-            <span>{data.oxxo.number}</span>
-          </div>
-        </section>
-        <section sx={{
-          width: ['100%', 700],
+        </div>
+        <div sx={{
+          mt: 10,
+          pb: 9,
           '& li': {
             color: 'title',
-            fontSize: [3, 4],
+            fontSize: [3, 3],
           }
         }}>
-          <Styled.h3>Instrucciones de pago en OXXO</Styled.h3>
+          <Styled.h4>Instrucciones de pago en OXXO</Styled.h4>
           <ol>
             <li>Entregue la factura al cajero para que escanee el código de barras.</li>
             <li>Proporcione el pago en efectivo al cajero.</li>
             <li>Una vez completado el pago, guarde el recibo de su pago para sus registros.</li>
             <li>Para cualquier duda o aclaración, contacte al proveedor de los bienes o servicio.</li>
           </ol>
-        </section>
+        </div>
       </div>
     </Layout>
   );
