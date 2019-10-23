@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 // eslint-disable-next-line
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './checkout-modal'
+
 const styles = {
   width: 200,
   height: 52,
@@ -14,28 +16,12 @@ const styles = {
   border: 'none',
 };
 
-const Checkout = class extends React.Component {
-  componentDidMount() {
-    this.stripe = window.Stripe(process.env.GATSBY_STRIPE_PUBLIC_KEY, {
-      betas: ['checkout_beta_4'],
-    });
-  }
-  async redirectToCheckout(event) {
-    event.preventDefault();
-    const { sku } = this.props;
-    const { error } = await this.stripe.redirectToCheckout({
-      items: [{ sku, quantity: 1 }],
-      successUrl: `${process.env.GATSBY_STRIPE_SUCCESS_URL}`,
-      cancelUrl: `${process.env.GATSBY_STRIPE_CANCEL_URL}`,
-      billingAddressCollection: 'required',
-    });
-    if (error) {
-      console.warn('Error:', error);
-    }
-  }
-  render() {
-    const { type } = this.props;
-    return (
+
+export default function Checkout({ type, sku }) {
+  const [showModal, toggleModal] = useState(false);
+
+  return (
+    <>
       <button
         sx={{
           ...styles,
@@ -44,11 +30,11 @@ const Checkout = class extends React.Component {
           fontFamily: 'system-ui, sans-serif',
           fontSize: 6,
         }}
-        onClick={event => this.redirectToCheckout(event)}
+        onClick={() => toggleModal(true)}
       >
         Comprar
       </button>
-    );
-  }
-};
-export default Checkout;
+      {showModal ? <Modal open={showModal} onClose={() => toggleModal(false)} sku={sku} /> : null}
+    </>
+  );
+}

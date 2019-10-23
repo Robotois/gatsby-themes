@@ -6,7 +6,7 @@ import { Styled } from 'theme-ui';
 import Layout from '../components/layout';
 import { Link } from 'gatsby';
 
-const Success = () => (
+const SuccessPage = () => (
   <Layout>
     <div
       sx={{
@@ -24,7 +24,7 @@ const Success = () => (
         <Styled.h2> GRACIAS POR TU COMPRA </Styled.h2>
         <Styled.p>
           En unos momentos recibirás un email de robotois con la confirmacion de
-          tu compra y recibos de pago.
+          tu compra.
         </Styled.p>
         <Link
           to="/"
@@ -54,4 +54,4 @@ const Success = () => (
   </Layout>
 );
 
-export default Success;
+export default SuccessPage;
