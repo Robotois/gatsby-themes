@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui';
 import React from 'react';
 import { Styled } from 'theme-ui';
 import Layout from '../components/layout';
-import { navigate } from 'gatsby';
+// import { Redirect } from "@reach/router"
 import Barcode from 'react-barcode';
 
 
@@ -14,14 +14,18 @@ const OxxoPage = (props) => {
     && props.location.state.data
     && props.location.state.data.source;
 
+  console.log(props);
+
+
   if (!data) {
-    return navigate('/');
+    return window && window.history.back();
   }
 
   const price = (data.amount / 100).toLocaleString('es-MX', {
     style: 'currency',
     currency: 'MXN',
   });
+
   return (
     <Layout>
       <div sx={{
