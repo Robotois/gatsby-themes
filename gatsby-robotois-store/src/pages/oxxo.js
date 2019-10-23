@@ -18,7 +18,10 @@ const OxxoPage = (props) => {
 
 
   if (!data) {
-    return window && window.history.back();
+    if (typeof window !== 'undefined') {
+      return window.history.back();
+    }
+    return null;
   }
 
   const price = (data.amount / 100).toLocaleString('es-MX', {
