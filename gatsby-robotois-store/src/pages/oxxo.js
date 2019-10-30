@@ -71,8 +71,8 @@ const OxxoPage = (props) => {
             <Barcode value={data.oxxo.number} width={2} height={160} />
           </div>
           <div>
-            <label>Valido hasta: </label>
-            <span>{new Date(data.oxxo.expires_after).toLocaleDateString('es-MX', {
+            <label>Válido hasta: </label>
+            <span>{new Date(data.oxxo.expires_after * 1000).toLocaleDateString('es-MX', {
               month: 'long',
               day: 'numeric',
               year: 'numeric',
