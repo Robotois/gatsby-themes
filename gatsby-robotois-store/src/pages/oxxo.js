@@ -14,9 +14,6 @@ const OxxoPage = (props) => {
     && props.location.state.data
     && props.location.state.data.source;
 
-  console.log(props);
-
-
   if (!data) {
     if (typeof window !== 'undefined') {
       return window.history.back();

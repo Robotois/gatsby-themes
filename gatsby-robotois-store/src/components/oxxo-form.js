@@ -2,7 +2,6 @@
 import { jsx, Styled } from 'theme-ui';
 // eslint-disable-next-line
 import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import ProductImage from './product-image';
 
 const fieldset = {
@@ -51,22 +50,10 @@ const initialState = {
   zip: "",
 };
 
-export default function OxxoForm({ createOxxoSource }) {
+export default function OxxoForm({ createOxxoSource, stripeData }) {
   const [formData, setFormData] = useState(initialState);
   const [loading, setLoading] = useState(false);
-  const data = useStaticQuery(graphql`
-  query {
-    stripeSku(id: { eq: "sku_FZoNf75AsXfXtd" }) {
-      id
-      price
-      product {
-        name
-      }
-    }
-  }
-`);
-  const productData = data.stripeSku;
-  const price = (productData.price / 100).toLocaleString('es-MX', {
+  const price = (stripeData.price / 100).toLocaleString('es-MX', {
     style: 'currency',
     currency: 'MXN',
   });
@@ -83,7 +70,7 @@ export default function OxxoForm({ createOxxoSource }) {
         justifyContent: 'center',
         mt: [14, 0],
       }}>
-        <Styled.p sx={{ marginBottom: 0 }}>{productData.product.name}</Styled.p>
+        <Styled.p sx={{ marginBottom: 0 }}>{stripeData.product.name}</Styled.p>
         <Styled.h1 sx={{ color: 'title', marginBottom: 10 }}>MX{price}</Styled.h1>
         <ProductImage image={"complete.png"} />
       </section>
@@ -144,7 +131,7 @@ export default function OxxoForm({ createOxxoSource }) {
                 event.preventDefault();
                 createOxxoSource({
                   ...formData,
-                  price: productData.price,
+                  price: stripeData.price,
                 });
               }}
               disabled={loading}

@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import Product from '../components/product';
 
 export const query = graphql`
-  query($productID: String!) {
+  query($productID: String!, $skuID: String!) {
     product(id: { eq: $productID }) {
       name
       releaseDate(formatString: "MMMM D, YYYY")
@@ -17,13 +17,20 @@ export const query = graphql`
         image
       }
     }
+    stripeSku(id: { eq: $skuID }) {
+      id
+      price
+      product {
+        name
+      }
+    }
   }
 `;
 
-function ProductTemplate({ data: { product } }) {
+function ProductTemplate({ data: { product, stripeSku } }) {
   return (
     <Layout>
-      <Product {...product} />
+      <Product {...{ ...product, stripeSku }} />
     </Layout>
   );
 }

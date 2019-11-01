@@ -28,9 +28,9 @@ class CheckoutModal extends React.Component {
 
   async redirectToCheckout(event) {
     event.preventDefault();
-    const { sku } = this.props;
+    const { stripeData } = this.props;
     const { error } = await this.stripe.redirectToCheckout({
-      items: [{ sku, quantity: 1 }],
+      items: [{ sku: stripeData.id, quantity: 1 }],
       successUrl: `${process.env.GATSBY_STRIPE_SUCCESS_URL}`,
       cancelUrl: `${process.env.GATSBY_STRIPE_CANCEL_URL}`,
       billingAddressCollection: 'required',
@@ -108,11 +108,12 @@ class CheckoutModal extends React.Component {
   }
 
   renderOxxoForm = () => {
-    return <OxxoForm createOxxoSource={this.createOxxoSource} />
+    const { stripeData } = this.props;
+    return <OxxoForm createOxxoSource={this.createOxxoSource} stripeData={stripeData} />
   };
 
   render() {
-    const { sku, ...rest } = this.props;
+    const { stripeData, ...rest } = this.props;
     const { showOxxoForm } = this.state;
     return (
       <Modal {...rest}>

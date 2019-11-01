@@ -17,7 +17,7 @@ const styles = {
 };
 
 
-export default function Checkout({ type, sku }) {
+export default function Checkout({ type, stripeData }) {
   const [showModal, toggleModal] = useState(false);
 
   return (
@@ -34,7 +34,7 @@ export default function Checkout({ type, sku }) {
       >
         Comprar
       </button>
-      {showModal ? <Modal open={showModal} onClose={() => toggleModal(false)} sku={sku} /> : null}
+      {showModal ? <Modal open={showModal} onClose={() => toggleModal(false)} stripeData={stripeData} /> : null}
     </>
   );
 }

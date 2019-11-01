@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import { useStaticQuery, graphql } from 'gatsby';
 import { jsx, Flex, Styled } from 'theme-ui';
 import Checkout from './checkout';
 import Slide from './slide';
@@ -9,16 +8,8 @@ function showReleaseDate(date) {
   return new Date(date) > new Date();
 }
 
-function Product({ name, releaseDate, description, videoId, components, sku }) {
-  const data = useStaticQuery(graphql`
-    query {
-      stripeSku(id: { eq: "sku_FZoNf75AsXfXtd" }) {
-        id
-        price
-      }
-    }
-  `);
-  const price = (data.stripeSku.price / 100).toLocaleString('es-MX', {
+function Product({ name, releaseDate, description, videoId, components, sku, stripeSku }) {
+  const price = (stripeSku.price / 100).toLocaleString('es-MX', {
     style: 'currency',
     currency: 'MXN',
   });
@@ -73,7 +64,7 @@ function Product({ name, releaseDate, description, videoId, components, sku }) {
               }}
             >
               <Styled.h1 sx={{ margin: 3, color: '#3227b6', fontSize: 11 }}>{name}</Styled.h1>
-              <Checkout type="primary" sku={sku} />
+              <Checkout type="primary" stripeData={stripeSku} />
             </div>
           </div>
         </div>
@@ -111,7 +102,7 @@ function Product({ name, releaseDate, description, videoId, components, sku }) {
           <h2 sx={{ textAlign: 'center', color: 'white', fontSize: 5 }}>
             MX{price}
           </h2>
-          <Checkout type="light" sku={sku} />
+          <Checkout type="light" stripeData={stripeSku} />
         </div>
       </Section>
     </Flex>

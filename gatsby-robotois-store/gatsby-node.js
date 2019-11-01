@@ -66,6 +66,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
         nodes {
           id
           slug
+          sku
         }
       }
     }
@@ -86,6 +87,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
       component: require.resolve('./src/templates/product.js'),
       context: {
         productID: product.id,
+        skuID: product.sku,
       },
     });
   });
