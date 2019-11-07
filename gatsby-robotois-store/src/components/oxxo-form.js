@@ -24,7 +24,10 @@ const fieldset = {
       flex: 3,
       border: 'none',
       height: 8,
-      px: 2
+      px: 2,
+      '::placeholder': {
+        color: '#AAA'
+      }
     }
   }
 };

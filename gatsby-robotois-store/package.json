@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-robotois-store",
-  "version": "1.0.9",
+  "name": "@manduks/gatsby-robotois-store",
+  "version": "1.0.10",
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
