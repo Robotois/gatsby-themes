@@ -25,6 +25,8 @@ function Course({ course, currentLessonId }) {
           flex: 1,
           // transform: [`translateX(${isOpen ? "0" : "-100%"})`, "none"],
           transition: "300ms cubic-bezier(1, 0, 0, 1)",
+          height: 700,
+          overflowY: 'scroll',
         }}
       >
         <Styled.ul role="menu" sx={{ pb: 14 }}>

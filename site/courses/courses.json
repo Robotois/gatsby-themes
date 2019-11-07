@@ -1,119 +1,158 @@
 [
   {
     "title": "Curso de Arduino",
-    "description": "Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.",
+    "description": "Aprende electrónica con el kit básico de Robotois, que consiste en un robot que puedes configurar y programar para evadir obstáculos, seguir una linea y resolver un laberinto. Este kit esta compuesto de una tarjeta Arduino, motores, servomotores y varios sensores.",
     "release_date": "2019-08-16T00:00:00.000Z",
     "lessons": [
       {
         "videoId": "yUauZDn0XHw",
-        "title": "Title of lesson",
-        "description": "This is the description of the lesson",
+        "title": "Componentes del kit",
+        "description": "",
         "content": [
-          "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin.",
-          "Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump."
-        ],
-        "code": "var y = 8",
-        "codeType": "c",
-        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+          "Aquí podemos ver cuales son las partes del kit y para qué sirve cada una de ellas, como podemos ensamblarlas para crear nuestro robot y qué tipos de robots podemos configurar."
+        ]
       },
       {
         "videoId": "yUauZDn0XHw2",
-        "title": "Title of lesson II",
-        "description": "This is the description of the lesson",
+        "title": "¿Que es Arduino?",
+        "description": "",
         "content": [
-          "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin.",
-          "Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump."
+          "En este lección aprenderemos los conceptos mas importantes relacionados con el proyecto Arduino, desde las definiciones de hardware hasta el programa que se ocupa para programar nuestro kit."
         ],
         "code": "var y = 8",
         "codeType": "c"
       },
       {
         "videoId": "yUauZDn0XHw3",
-        "title": "Title of lesson III",
-        "description": "This is the description of the lesson",
+        "title": "Configuración de tu entorno de desarrollo",
+        "description": "",
         "content": [
-          "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin.",
-          "Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump.",
-          "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin."
-        ],
-        "code": "var y = 8",
-        "codeType": "c"
-      }
-    ]
-  },
-  {
-    "title": "Curso de Arduino II",
-    "description": "Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.",
-    "release_date": "2019-08-16T00:00:00.000Z",
-    "lessons": [
-      {
-        "videoId": "yUauZDn0XHw",
-        "title": "Title of lesson",
-        "description": "This is the description of the lesson",
-        "content": [
-          "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin.",
-          "Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump."
+          "Para poder programar o configurar nuestro kit, es necesario instalar unos programas en tu computadora, ademas de aprender a usar la plataforma Robotois que es una manera sencilla de programar nuestros kits sin escribir código."
         ],
         "code": "var y = 8",
         "codeType": "c",
-        "file": "www.file.com"
-      }
-    ]
-  },
-  {
-    "title": "Curso de Arduino III",
-    "description": "Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.",
-    "release_date": "2019-08-16T00:00:00.000Z",
-    "lessons": [
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
       {
-        "videoId": "yUauZDn0XHw",
-        "title": "Title of lesson",
-        "description": "This is the description of the lesson",
+        "videoId": "yUauZDn0XHw4",
+        "title": "Plataforma Robotois",
+        "description": "",
         "content": [
-          "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin.",
-          "Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump."
+          "En esta lección aprenderemos a usar la plataforma online Robotois, usaremos un led para hacer pequeñas tareas como parpadear un led, estructurar nuestro programa y operaciones matemáticas que nos ayudaran a entender como funciona la electrónica y programación."
         ],
         "code": "var y = 8",
         "codeType": "c",
-        "file": "www.file.com"
-      }
-    ]
-  },
-  {
-    "title": "Curso de Arduino IV",
-    "description": "Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.",
-    "release_date": "2019-08-16T00:00:00.000Z",
-    "lessons": [
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
       {
-        "videoId": "yUauZDn0XHw",
-        "title": "Title of lesson",
-        "description": "This is the description of the lesson",
+        "videoId": "yUauZDn0XHw5",
+        "title": "Principios básicos de electrónica",
+        "description": "",
         "content": [
-          "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin.",
-          "Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump."
+          "Se definen conceptos básicos de electrónica como voltaje, corriente y resistencia. Aprenderemos a conectar nuestros componentes y cómo evitar errores de conexión."
         ],
         "code": "var y = 8",
         "codeType": "c",
-        "file": "www.file.com"
-      }
-    ]
-  },
-  {
-    "title": "Curso de Arduino V",
-    "description": "Aprende electrónica con él kit básico de Robotois, que consiste de un robot que puedes configurar para evadir obstáculos, seguir una linea y resolver un laberinto.",
-    "release_date": "2019-08-16T00:00:00.000Z",
-    "lessons": [
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
       {
-        "videoId": "yUauZDn0XHw",
-        "title": "Title of lesson",
-        "description": "This is the description of the lesson",
+        "videoId": "yUauZDn0XHw6",
+        "title": "Actuadores LED",
+        "description": "",
         "content": [
-          "Corned beef pork belly prosciutto tenderloin shank capicola. Swine spare ribs pork chop shank ham hock leberkas meatball. Prosciutto venison flank drumstick, bacon sausage pancetta leberkas meatloaf doner shoulder. Sausage ball tip pork chop alcatra, fatback brisket short loin.",
-          "Flank pork belly leberkas pig jowl corned beef. Hamburger ham salami, venison pastrami strip steak spare ribs pork belly brisket. Bacon chicken tenderloin shankle tongue doner, corned beef shoulder burgdoggen cupim chuck pig turkey. Biltong brisket doner sirloin kielbasa short ribs porchetta prosciutto turkey leberkas ground round landjaeger spare ribs. Kevin strip steak tongue, bacon cupim chicken drumstick rump."
+          "Resolveremos problemas de electrónica común, hacer un semáforo, tira de leds y cómo manipular varios componentes de tipo led al mismo tiempo."
         ],
         "code": "var y = 8",
         "codeType": "c",
-        "file": "www.file.com"
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
+      {
+        "videoId": "yUauZDn0XHw7",
+        "title": "Actuadores MOTOR",
+        "description": "",
+        "content": [
+          "En esta lección aprenderemos a controlar los motores del kit Robotois, los haremos girar a diferente velocidad, en dirección opuesta y en diferentes intervalos. Todo esto lo haremos con ayuda de las librerías Arduino de Robotois."
+        ],
+        "code": "var y = 8",
+        "codeType": "c",
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
+      {
+        "videoId": "yUauZDn0XHw8",
+        "title": "Sensor ultrasónico para medir distancia",
+        "description": "",
+        "content": [
+          "En este video vamos a aprender a usar el sensor ultrasónico que nos ayuda a medir la distancia que hay entre el sensor y un objeto, haremos funcionar el sensor en combinación con los leds. Aprenderemos a conectar el sensor y cómo funciona con ayuda de las librerías Robotois."
+        ],
+        "code": "var y = 8",
+        "codeType": "c",
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
+      {
+        "videoId": "yUauZDn0XHw9",
+        "title": "Sensor de linea",
+        "description": "",
+        "content": [
+          "Cual es el principio fundamental del sensor de linea, aquí vamos a aprender a conectar y usar los sensores de linea, haremos ejemplos prácticos de como usarlo y una pequeña introducción de cómo funciona el algoritmo de seguidor de linea."
+        ],
+        "code": "var y = 8",
+        "codeType": "c",
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
+      {
+        "videoId": "yUauZDn0XHw10",
+        "title": "Vamos a armar el Robot",
+        "description": "",
+        "content": [
+          "En esta lección vamos a armar el robot con funcionalidad inicial que consiste en avanzar y hacer una rutina de movimiento con la mayoría de los sensores conectados. Al final de esta lección tendremos un robot bailarín."
+        ],
+        "code": "var y = 8",
+        "codeType": "c",
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
+      {
+        "videoId": "yUauZDn0XHw11",
+        "title": "Robot con navegación autonoma",
+        "description": "",
+        "content": [
+          "Configuraremos un robot que puede moverse solo en un espacio evitando colisiones, aprenderemos un algoritmo básico de navegación con la ayuda del sensor ultrasónico."
+        ],
+        "code": "var y = 8",
+        "codeType": "c",
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
+      {
+        "videoId": "yUauZDn0XHw12",
+        "title": "Robot seguidor de linea",
+        "description": "",
+        "content": [
+          "Ahora que tenemos ya todo nuestro robot armado le vamos a enseñar a seguir una linea, y aprenderemos los conceptos fundamentales de este tipo de robots, ocuparemos todos los conocimientos de lecciones anteriores para pulir y entender como funciona un robot seguidor de linea."
+        ],
+        "code": "var y = 8",
+        "codeType": "c",
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
+      {
+        "videoId": "yUauZDn0XHw13",
+        "title": "Robot que resuelve laberintos",
+        "description": "",
+        "content": [
+          "Este es el nivel máximo de capacidad de nuestro robot, con ayuda de todos sus componentes haremos que resuelva laberintos y pueda navegarlos sin problema."
+        ],
+        "code": "var y = 8",
+        "codeType": "c",
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
+      },
+      {
+        "videoId": "yUauZDn0XHw14",
+        "title": "Servomotores y expansion del kit",
+        "description": "",
+        "content": [
+          "En este video aprenderemos a usar el servomotor, como funciona y cómo podemos darle personalidad a nuestro robot."
+        ],
+        "code": "var y = 8",
+        "codeType": "c",
+        "file": "https://github.com/manduks/mov-x/archive/master.zip"
       }
     ]
   }
