@@ -53,6 +53,7 @@ function Course({ course, currentLessonId }) {
             height="100%"
             width="100%"
             title="Video"
+            allowfullscreen="allowfullscreen"
             src={`https://youtube.com/embed/${currentLesson.videoId}?autoplay=0&controls=1&showinfo=0&autohide=0`}
           />
         </div>
