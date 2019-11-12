@@ -48,14 +48,34 @@ function Course({ course, currentLessonId }) {
       <section sx={{ flex: 3 }}>
         <Styled.h1 sx={{ textAlign: 'center' }}>{course.title}</Styled.h1>
         <div sx={{ width: '100%', height: 500 }}>
-          <iframe
-            frameBorder="0"
-            height="100%"
-            width="100%"
-            title="Video"
-            allowfullscreen="allowfullscreen"
-            src={`https://youtube.com/embed/${currentLesson.videoId}?autoplay=0&controls=1&showinfo=0&autohide=0`}
-          />
+          {currentLesson.videoId ? (
+            <iframe
+              frameBorder="0"
+              height="100%"
+              width="100%"
+              title="Video"
+              allowfullscreen="allowfullscreen"
+              src={`https://youtube.com/embed/${currentLesson.videoId}?autoplay=0&controls=1&showinfo=0&autohide=0`}
+            />
+          ) : (
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                width: '100%',
+                height: '100%',
+                justifyContent: 'center',
+                flexDirection: 'column',
+              }}>
+                <h3>Muy pronto tendremos esta lección disponible ...</h3>
+                <span role="img" aria-label="light mode" style={{
+                  paddingTop: 30,
+                  fontSize: 100,
+                }}>
+                  👨🏽‍💻
+                </span>
+              </div>
+            )}
+
         </div>
         <article sx={{ p: 8, pb: 6 }}>
           {currentLesson.content.map((content, idx) => <Styled.p key={idx}>{content}</Styled.p>)}

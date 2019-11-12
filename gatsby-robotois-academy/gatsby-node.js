@@ -14,7 +14,7 @@ exports.sourceNodes = ({ actions }) => {
   actions.createTypes(`
     type Lesson implements Node @dontInfer {
       id: ID!
-      videoId: String!
+      videoId: String
       title: String!
       description: String!
       content: [String!]
