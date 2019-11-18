@@ -3,6 +3,13 @@ import { Link } from 'gatsby';
 import { Styled, Flex, jsx } from 'theme-ui';
 import FileDownloader from './file-downloader'
 
+function justifyContent(previousLesson, nextLesson) {
+  if (previousLesson && nextLesson) {
+    return 'space-between';
+  }
+  return previousLesson ? 'flex-start' : 'flex-end';
+}
+
 function Course({ course, currentLessonId }) {
   const { lessons } = course;
   const currentIndex = lessons.findIndex(l => l.id === currentLessonId);
@@ -89,26 +96,18 @@ function Course({ course, currentLessonId }) {
             currentLesson.file ? <FileDownloader link={currentLesson.file} /> : null}
         </Flex>
         <Flex sx={{
-          justifyContent: 'space-between',
+          justifyContent: justifyContent(previousLesson, nextLesson),
           pb: 10,
         }}>
           {
             previousLesson ? <Link
-              sx={{
-                color: 'title',
-                textDecoration: 'underline',
-                fontFamily: 'system-ui, sans-serif',
-              }}
+              sx={lessonLinkStyles}
               to={`${course.slug}${previousLesson.slug}`}>
               {previousLesson.title}
             </Link> : null}
           {
             nextLesson ? <Link
-              sx={{
-                color: 'title',
-                textDecoration: 'underline',
-                fontFamily: 'system-ui, sans-serif',
-              }}
+              sx={lessonLinkStyles}
               to={`${course.slug}${nextLesson.slug}`}>
               {nextLesson.title}
             </Link> : null}
@@ -119,3 +118,10 @@ function Course({ course, currentLessonId }) {
 }
 
 export default Course;
+
+const lessonLinkStyles = {
+  color: 'title',
+  textDecoration: 'underline',
+  fontFamily: 'system-ui, sans-serif',
+  fontSize: [2, 4]
+};
