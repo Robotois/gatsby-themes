@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import { Styled, Flex, jsx } from 'theme-ui';
 import FileDownloader from './file-downloader'
@@ -10,12 +11,22 @@ function justifyContent(previousLesson, nextLesson) {
   return previousLesson ? 'flex-start' : 'flex-end';
 }
 
+
 function Course({ course, currentLessonId }) {
+  const lessonRef = useRef(currentLessonId);
   const { lessons } = course;
   const currentIndex = lessons.findIndex(l => l.id === currentLessonId);
   const currentLesson = lessons[currentIndex];
   const nextLesson = lessons[currentIndex + 1];
   const previousLesson = lessons[currentIndex - 1];
+
+  useEffect(() => {
+    document.getElementById('navigation').scrollBy({
+      top: lessonRef.current.offsetTop - 100,
+      behavior: 'smooth'
+    });
+  }, [currentLessonId]);
+
   return (
     <Flex
       sx={{
@@ -25,6 +36,7 @@ function Course({ course, currentLessonId }) {
       }}
     >
       <nav
+        id="navigation"
         sx={{
           pt: 11,
           display: ["none", "flex"],
@@ -43,6 +55,7 @@ function Course({ course, currentLessonId }) {
                 <Link
                   role="menuitem"
                   activeClassName="active"
+                  ref={lesson.id === currentLessonId ? lessonRef : undefined}
                   to={`${course.slug}${lesson.slug}`}>
                   <Styled.h3>{lesson.title}</Styled.h3>
                   <p className="summary">{lesson.description}</p>
@@ -61,7 +74,7 @@ function Course({ course, currentLessonId }) {
               height="100%"
               width="100%"
               title="Video"
-              allowfullscreen="allowfullscreen"
+              allowFullScreen="allowfullscreen"
               src={`https://youtube.com/embed/${currentLesson.videoId}?autoplay=0&controls=1&showinfo=0&autohide=0`}
             />
           ) : (
